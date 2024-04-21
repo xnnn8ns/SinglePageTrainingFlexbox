@@ -1,0 +1,254 @@
+@import 'nullstyle';
+@mixin title {
+    font-size: 28px;
+    color: #445161;
+    line-height: 24px;
+    text-wrap: nowrap;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    min-width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 1 auto;
+}
+
+.header {
+    background-color: #445162;
+    padding: 50px 0;
+    .container {
+        max-width: 1180px;
+        margin: 0 auto;
+    }
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__body {
+        color: #FFF;
+        padding: 0 30px 0 0;
+    }
+
+    &__title {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    &__list {
+        font-size: 20px;
+        li {
+            background: url('../img/check.png') 0 1px no-repeat;
+            line-height: 22px;
+            padding-left: 36px;
+            margin-bottom: 15px;
+        }
+        li:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__image {
+        img {
+            max-width: 85%;
+            max-height: 85%;
+        }
+    }
+
+}
+
+.footer {
+    background-color: #F5F5F5;
+    &__row {
+        display: flex;
+        height: 65px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 12px;
+        letter-spacing: 3px;
+        padding: 50px 0 40px;
+    }
+}
+
+.what {
+    padding: 50px 0;
+    .container {
+        max-width: 1110px;
+        margin: 0 auto;
+    }
+
+    &__row {
+        display: flex;
+    }
+
+    &__title {
+        @include title;
+        margin-bottom: 36px;
+    }
+
+    &__body {
+        flex: 1 1 auto; 
+        padding-left: 38px;
+        p {
+            font-size: 20px;
+            color: #333333;
+        }
+    }
+
+    &__image {
+        flex: 0 0 391px;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.columns {
+    background-color: #F5F5F5;
+    padding: 50px 0;
+    .container {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+    
+    &__title {
+        @include title;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px -8px;
+    }
+
+    &__column {
+        flex: 0 1 50%;
+        padding: 0px 8px;
+	    margin: 0px 0px 30px 0px;
+    }
+}
+
+.item {
+    &__row {
+        display: flex;
+    }
+
+    &__image {
+        flex: 0 0 200px;
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__body {
+        flex: 1 1 auto;
+        padding: 0 0 0 15px;
+    }
+
+    &__title {
+        color: #445162;
+        font-size: 20px;
+        margin-bottom: 13px;
+    }
+
+    &__text {
+        color: #333333;
+        font-size: 16px;
+        line-height: 16px;
+    }
+}
+.vertical {
+    padding: 50px 0;
+
+    .container {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        @include title;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    &__body {
+        max-width: 990px;
+        margin: 0 auto;
+    }
+
+    &__row {
+        display: flex;
+        margin: 0 -22.5px;
+    }
+
+    &__column {
+        flex: 0 1 33.333%;
+        padding: 0 22.5px;
+        display: flex;
+    }
+
+    &__item {
+        background-color: #445162;
+        color: #FFF;
+        border-radius: 5px;
+        border: 1px solid #445162;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__subtitle {
+        text-align: center;
+        font-size: 24px;
+        padding: 15px 0;
+    }
+
+    &__label {
+        background-color: #fff;
+        text-align: center;
+        color: #445162;
+        padding: 12px 0;
+        font-size: 32px;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 20px;
+        flex: 1 1 auto;
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__button {
+        display: block;
+        margin: 0px 20px;
+        text-align: center;
+        line-height: 40px;
+        background-color: #fff;
+        border-radius: 5px;
+        color: #445161;
+        font-size: 18px;
+    }
+}
